@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body {
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    margin: 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title, .componentTitle {
+    text-align: center;
+    border: 3px solid black;
+    padding: auto;
+    background-color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+    margin: 2rem 20vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.componentTitle {
+    margin: 1rem 20vw 0.7rem 20vw;
 }
 
-.App-link {
-  color: #61dafb;
+#preview {
+    display: inline-block;
+    padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#editor, #preview {
+    border-style: solid;
+}
+.editorWrap {
+    width: 600px;
+    margin: 18px auto;
+}
+
+.editorWrap textarea {
+    width: 99%;
+    min-height: 200px;
+    margin-bottom: -5px;
+    resize: vertical;
+    outline: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.editorWrap textarea, #preview {
+    background-color: #f59696;
+    border: 1px solid #1d2f2f;
+    box-shadow: 0px 0px 18px 8px #000000bf;
+}
+
+.previewWrap {
+    width: 800px;
+    margin: 20px auto;
+    min-height: 200px;
+    overflow-wrap: break-word;
+    padding-right: 20px;
+}
+
+.previewWrap #preview {
+    width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+    .previewWrap {
+        width: 630px;
+    }
+    .editorWrap {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        margin: 5px 0;
+    }
+    .editorWrap {
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .previewWrap {
+        width: 95vw;
+    }
+    .previewWrap #preview {
+        width: 95vw;
+    }
+    .previewWrap #preview img {
+        height: 200px;
+    }
+}
+
+#preview blockquote {
+    border-left: 3.5px solid #133535;
+    color: #2b4b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+}
+
+#preview code {
+    background: white;
+    padding: 1px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#preview pre {
+    background: white;
+    padding: 5px 0 5px 5px;
+}
+
+#preview h1 {
+    border-bottom: 2px solid #224B4B;
+}
+
+#preview h2 {
+    border-bottom: 1px solid #224B4B;
+}
+
+#preview table {
+    border-collapse: collapse;
+}
+
+#preview td, #preview th {
+    border: 2px solid #224B4B;
+    padding-left: 5px;
+    padding-right: 5px;
 }
